@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#check {
+    display: none;
+}
+
+.button {
+    width: 20rem;
+    height: 10rem;
+    background-color: #ebccbf;
+    border-radius: 5rem;
+    transition: 0.5s;
+}
+
+.button::before {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: #ad9090;
+    content: '';
+    position: absolute;
+    margin: 1rem;
+    transition: 0.5s;
+}
+
+#check:checked + .button::before {
+    transform: translateX(10rem);
+    background-color: #5e60bd;
+}
+
+#check:checked + .button {
+    background-color: #bdb4e6;
+}
+
+#check:checked ~ body {
+    background-color: black;
+}
